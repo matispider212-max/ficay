@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio en Mantenimiento</title>
+    <style>
+        /* Estilos generales y fondo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* Fondo oscuro moderno */
+            color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal */
+        .contenedor {
+            max-width: 600px;
+            padding: 20px;
+            width: 90%;
+        }
+
+        /* Contenedor de la imagen con animación sutil de flotado */
+        .imagen-ranita {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: flotar 3s ease-in-out infinite;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Textos */
+        h1 {
+            font-size: 2.5rem;
+            color: #4ade80; /* Color verde brillante a juego con la ranita */
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Barra de progreso decorativa */
+        .barra-progreso {
+            width: 100%;
+            background-color: #1e293b;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .progreso {
+            width: 65%; /* Puedes cambiar este porcentaje según el avance */
+            height: 100%;
+            background-color: #4ade80;
+            border-radius: 4px;
+            animation: carga 2s ease-out;
+        }
+
+        @keyframes carga {
+            from { width: 0%; }
+            to { width: 65%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <!-- Reemplaza "ranita.png" por el nombre exacto de tu archivo de imagen -->
+        <img src="ranita.png" alt="Ranita trabajando" class="imagen-ranita">
+        
+        <h1>¡Estamos trabajando en algo novedoso!</h1>
+        <p>Actualmente estamos reparando y mejorando nuestra página web para traerte una experiencia increíble. ¡Volveremos muy pronto!</p>
+        
+        <!-- Barra que simula el proceso de mejora -->
+        <div class="barra-progreso">
+            <div class="progreso"></div>
+        </div>
+    </div>
+
+</body>
+</html>
